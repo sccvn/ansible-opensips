@@ -9,14 +9,21 @@
   retries: 10
   delay: 2
 
-- name: Setup OpenSIPS repository key from keyserver (Debian)
-  apt_key:
-    keyserver: '{{ opensips_apt_key_server }}'
-    id: '{{ opensips_apt_key_id }}'
-  register: apt_key_result
-  until: apt_key_result is success
-  retries: 10
-  delay: 2
+# DEPRECATED
+# - name: Setup OpenSIPS repository key from keyserver (Debian)
+#   apt_key:
+#     keyserver: '{{ opensips_apt_key_server }}'
+#     id: '{{ opensips_apt_key_id }}'
+#   register: apt_key_result
+#   until: apt_key_result is success
+#   retries: 10
+#   delay: 2
+- name: Add opensips GPG key
+  ansible.builtin.get_url:
+    url: {{ opensips_apt_key_server }}
+    dest: /usr/share/keyrings/opensips-org.gpg
+    mode: '0644'
+    force: true
 
 - name: Setup OpenSIPS repository (Debian)
   apt_repository:

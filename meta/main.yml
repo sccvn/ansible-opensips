@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: opensips
-  author: Răzvan Crainea
+  author: Răzvan Crainea , Kevin Nguyen
   namespace: opensips
   description: OpenSIPS role to install packages from official repositories
   company: OpenSIPS Project
@@ -19,7 +19,7 @@ galaxy_info:
   # - CC-BY
   license: GPLv3
 
-  min_ansible_version: 2.4
+  min_ansible_version: 2.16
 
   # Optionally specify the branch Galaxy will use when accessing the GitHub
   # repo for this role. During role install, if no tags are available,

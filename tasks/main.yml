@@ -23,3 +23,9 @@
     dest: '/etc/opensips/opensips.cfg'
     mode: 0644
   when: opensips_config is defined
+
+- name: Download OpenSIPS configure
+  get_url:
+    url: https://git.webitel.com/projects/WEP/repos/opensips/raw/opensips.cfg
+    dest: /etc/opensips/opensips.cfg
+  when: not bootstrap_state.stat.exists
