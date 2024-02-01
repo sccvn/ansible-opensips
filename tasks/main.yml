@@ -26,6 +26,6 @@
 
 - name: Download OpenSIPS configure
   get_url:
-    url: https://git.webitel.com/projects/WEP/repos/opensips/raw/opensips.cfg
+    url: https://raw.githubusercontent.com/kevinnguyenai/ansible-playbooks-voip/feature/playbook-opensips/templates/opensips/opensips.cfg
     dest: /etc/opensips/opensips.cfg
   when: not bootstrap_state.stat.exists
