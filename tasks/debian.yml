@@ -29,7 +29,7 @@
   apt_repository:
     # DEPRECATED
     # repo: 'deb {{ opensips_apt_repo }} {{ ansible_distribution_release }} {{ opensips_version }}-{{ opensips_build }}'
-    repo: 'deb {{ opensips_apt_repo }} {{ custom_distribution_release }} {{ opensips_version }}-{{ opensips_build }}'
+    repo: 'deb [signed-by=/usr/share/keyrings/opensips-org.gpg] {{ opensips_apt_repo }} {{ custom_distribution_release }} {{ opensips_version }}-{{ opensips_build }}'
     state: present
     filename: opensips
 
