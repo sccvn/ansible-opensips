@@ -1,12 +1,14 @@
 ---
 # defaults file for opensips
-opensips_version: 3.1
+opensips_version: 3.4
 opensips_build: releases  # or nightly
 
 # defaults for Debian apt
-opensips_apt_key_id: '049AD65B'
-opensips_apt_key_server: 'keyserver.ubuntu.com'
-opensips_apt_repo: 'http://apt.opensips.org'
+#opensips_apt_key_id: '049AD65B'
+#opensips_apt_key_server: 'keyserver.ubuntu.com'
+opensips_apt_key_id: 'opensips-org.gpg'
+opensips_apt_key_url: 'https://apt.opensips.org/opensips-org.gpg'
+opensips_apt_repo: 'https://apt.opensips.org'
 
 # defaults for RedHat/CentOS yum
 opensips_yum_repo: 'http://yum.opensips.org'
