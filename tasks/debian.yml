@@ -20,7 +20,7 @@
 #   delay: 2
 - name: Add opensips GPG key
   ansible.builtin.get_url:
-    url: '{{ opensips_apt_key_server }}'
+    url: '{{ opensips_apt_key_url }}'
     dest: /usr/share/keyrings/opensips-org.gpg
     mode: '0644'
     force: true
