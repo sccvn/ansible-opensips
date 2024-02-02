@@ -28,4 +28,4 @@
   get_url:
     url: https://raw.githubusercontent.com/kevinnguyenai/ansible-playbooks-voip/feature/playbook-opensips/templates/opensips/opensips.cfg
     dest: /etc/opensips/opensips.cfg
-  when: not bootstrap_state.stat.exists and opensips_config is not defined
+  when: not opensips_config
