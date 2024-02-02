@@ -27,7 +27,9 @@
 
 - name: Setup OpenSIPS repository (Debian)
   apt_repository:
-    repo: 'deb {{ opensips_apt_repo }} {{ ansible_distribution_release }} {{ opensips_version }}-{{ opensips_build }}'
+    # DEPRECATED
+    # repo: 'deb {{ opensips_apt_repo }} {{ ansible_distribution_release }} {{ opensips_version }}-{{ opensips_build }}'
+    repo: 'deb {{ opensips_apt_repo }} {{ custom_distribution_release }} {{ opensips_version }}-{{ opensips_build }}'
     state: present
     filename: opensips
 
