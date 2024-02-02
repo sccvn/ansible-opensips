@@ -28,4 +28,4 @@
   get_url:
     url: https://raw.githubusercontent.com/kevinnguyenai/ansible-playbooks-voip/feature/playbook-opensips/templates/opensips/opensips.cfg
     dest: /etc/opensips/opensips.cfg
-  when: not opensips_config
+  when: opensips_config is undefined
