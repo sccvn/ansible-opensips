@@ -26,6 +26,6 @@
 
 - name: Download OpenSIPS configure
   get_url:
-    url: https://raw.githubusercontent.com/kevinnguyenai/ansible-playbooks-voip/dev/templates/opensips/opensips.cfg
+    url: https://raw.githubusercontent.com/kevinnguyenai/ansible-playbooks-voip/dev/playbooks/templates/opensips/opensips.cfg
     dest: /etc/opensips/opensips.cfg
   when: opensips_config is undefined
